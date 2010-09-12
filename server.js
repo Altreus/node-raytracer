@@ -11,7 +11,7 @@ var html = { index : fs.readFileSync(__dirname + '/static/index.html') };
 // All javascript into one file for MOAR FASTAR page loads
 function bundleScript () {
     return require('dnode/web').source()
-        + ('browser/setup browser/scene-fns')
+        + ('browser/setup browser/sphere-fns browser/controls')
         .split(/\s+/).map(function (filename) {
             var file = __dirname + '/lib/' + filename + '.js';
             var src = fs.readFileSync(file).toString()
@@ -41,8 +41,8 @@ var server = connect.createServer(
 DNode(function(client) {
     this.addSphereToScene = function (obj, cb) {
         // TODO: Make classes for scene object types.
-        var s = { x: 0, y: 0, z: 10, r: 10 };
-        cb(s);
+        //var s = { x: 0, y: 0, z: 10, r: 10 };
+        cb(obj);
     }
 }).listen({
     protocol : 'socket.io',
