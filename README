@@ -1,0 +1,14 @@
+node-raytracer
+
+Oh my
+
+This is a currently very hacky way of learning node. What's going on here is
+that I have made a thing that will eventually allow you to create 3D scenes and
+manipulate them in the browser, while the dnodification of it will patiently
+raytrace what you are doing and paste the results onto the wireframes that you
+will see while it is doing this.
+
+The stuff is drawn onto a canvas so this only works in an HTML5-capable browser
+(for now).
+
+Excuse the mess. It's my first node project. Much code borrowed from node-chess.
